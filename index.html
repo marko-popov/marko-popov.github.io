@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marko Popov | Java Developer</title>
+    <title>Marko Popov | Java Developer Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -12,12 +12,15 @@
     <header>
         <div class="container">
             <h1>MARKO POPOV</h1>
-            <p class="subtitle">Aspiring Java Developer | Mechanical Engineer</p>
+            <p class="subtitle">Aspiring Java Developer | Master Mechanical Engineer</p>
             <div class="social-links">
-                <a href="mailto:markopopov1993@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/marko-popov" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/marko-popov" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:markopopov1993@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/marko-popov" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/marko-popov" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
+            <a href="CV_Marko_Popov.pdf" class="btn btn-outline" download>
+                <i class="fas fa-download"></i> Download CV (PDF)
+            </a>
         </div>
     </header>
 
@@ -25,74 +28,128 @@
         <section id="about">
             <h2><i class="fas fa-user"></i> Profile</h2>
             <p>
-                Master Mechanical Engineer with 9 years of experience as a Military Officer, specializing in problem-solving and team leadership. 
-                Currently transitioning into software development with a deep focus on Java, Spring Boot, and backend architecture.
+                Master Mechanical Engineer with 9 years of experience as a <strong>Military Officer</strong>, specializing in high-pressure problem solving and team leadership. 
+                Extensive background in <strong>data analysis</strong> and <strong>maintenance planning</strong> for complex mechanical and electronic systems. 
+                Experienced in leveraging <strong>Python (Pandas, Matplotlib)</strong> and <strong>Excel</strong> for technical data processing and predictive maintenance analytics.
+            </p>
+            <p style="margin-top: 10px;">
+                Currently transitioning into software engineering with a primary focus on building robust backend systems using <strong>Java and Spring Boot</strong>. 
+                To ensure a comprehensive understanding of full-stack architecture, I am actively expanding my frontend knowledge in <strong>HTML5, CSS3, and JavaScript</strong>.
             </p>
         </section>
 
         <section id="education">
             <h2><i class="fas fa-graduation-cap"></i> Education & Certification</h2>
-            <div class="education-item">
-                <h3>Master of Mechanical Engineering</h3>
-                <p class="institution">University of Belgrade, Serbia | GPA: 9.35</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor of Mechanical Engineering</h3>
-                <p class="institution">University of Defense, Belgrade, Serbia | GPA: 8.61</p>
+            <div class="education-grid">
+                <div class="education-item">
+                    <h3>Master of Mechanical Engineering</h3>
+                    <p class="institution">University of Belgrade, Serbia | GPA: 9.35 / 10.00</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Mechanical Engineering</h3>
+                    <p class="institution">University of Defense, Belgrade | GPA: 8.61 / 10.00</p>
+                </div>
             </div>
             <div class="courses-box">
-                <h3>Technical Courses</h3>
+                <h3>Technical & Professional Training</h3>
                 <ul class="course-list">
                     <li>Java Programming Series (Fundamentals, OOP, Advanced) – Code with Mosh</li>
                     <li>Data Structures & Algorithms – Udemy (In Progress)</li>
+                    <li><strong>English for Developers (B1) – freeCodeCamp (In Progress)</strong></li>
+                    <li>Frontend Development Basics (HTML, CSS, JS) – Self-study</li>
                 </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2><i class="fas fa-tools"></i> Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <ul>
+                        <li>Java 17 (Spring Boot)</li>
+                        <li>Hibernate / JPA</li>
+                        <li>Spring Security & JWT</li>
+                        <li>JUnit 5 & Mockito</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Data & Analytics</h3>
+                    <ul>
+                        <li>Python (Pandas, Matplotlib)</li>
+                        <li>Advanced Excel (VBA)</li>
+                        <li>Predictive Analytics</li>
+                        <li>Maintenance Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Frontend (Learning)</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Responsive Design</li>
+                        <li>Flexbox / CSS Grid</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Infrastructure</h3>
+                    <ul>
+                        <li>Docker & Compose</li>
+                        <li>PostgreSQL</li>
+                        <li>Git & GitHub Actions</li>
+                        <li>Linux Shell</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category full-width">
+                    <h3><i class="fas fa-users"></i> Leadership & Soft Skills</h3>
+                    <div class="soft-skills-tags">
+                        <span>Leadership</span> <span>Strategic Planning</span> <span>Crisis Management</span> 
+                        <span>Reliability</span> <span>Analytical Thinking</span> <span>Technical English</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects">
             <h2><i class="fas fa-code"></i> Projects</h2>
+            
             <div class="project-card featured">
                 <h3>Airport Gate Management System</h3>
-                <p>A Spring Boot RESTful application for gate allocation and flight scheduling. Implemented PostgreSQL/Hibernate logic and JWT security.</p>
+                <p>A Spring Boot RESTful application for gate allocation and flight scheduling. Features secure authentication with JWT and automated resource optimization.</p>
                 <div class="tags">
                     <span>Java 17</span> <span>Spring Boot</span> <span>PostgreSQL</span> <span>Docker</span> <span>JWT</span>
                 </div>
-                <a href="https://github.com/marko-popov/Airport_Gate_Management_System" target="_blank" class="btn">Source Code</a>
+                <div style="margin-top: 20px; display: flex; gap: 10px;">
+                    <a href="airport-project.html" class="btn">View Case Study</a>
+                    <a href="https://github.com/marko-popov/Airport_Gate_Management_System" target="_blank" class="btn btn-outline">GitHub Code</a>
+                </div>
             </div>
+
             <div class="project-card">
                 <h3>Patient Management System (In Progress)</h3>
-                <p>Microservices-based system using gRPC, Apache Kafka, and Dockerized deployment on AWS infrastructure.</p>
+                <p>Microservices architecture exploring gRPC and Apache Kafka for high-performance inter-service communication and scalability.</p>
                 <div class="tags">
                     <span>Microservices</span> <span>Kafka</span> <span>gRPC</span> <span>AWS</span>
+                </div>
+                <div style="margin-top: 20px;">
+                    <span class="institution"><i class="fas fa-hourglass-half"></i> Development in progress</span>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2><i class="fas fa-tools"></i> Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Java 17 (Spring Boot)</li>
-                        <li>Hibernate / JPA</li>
-                        <li>JUnit 5 & Mockito</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Infrastructure</h3>
-                    <ul>
-                        <li>Docker & Docker Compose</li>
-                        <li>PostgreSQL</li>
-                        <li>Git & CI/CD</li>
-                    </ul>
-                </div>
-            </div>
+        <section id="contact">
+            <h2><i class="fas fa-paper-plane"></i> Get In Touch</h2>
+            <p>I am currently looking for a <strong>Junior Java Developer</strong> position or internship. If you value discipline, analytical thinking, and clean code, let's connect!</p>
+            <a href="mailto:markopopov1993@gmail.com" class="btn">Send an Email</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Marko Popov. Professional Portfolio.</p>
+        <p>&copy; 2026 Marko Popov | Built with Passion & Engineering Precision</p>
     </footer>
 
     <script src="js/script.js"></script>

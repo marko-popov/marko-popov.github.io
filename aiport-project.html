@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Gate Management | Project Detail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="btn btn-outline" style="margin-bottom: 20px;">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1>Airport Gate Management System</h1>
+            <p class="subtitle">Java Spring Boot & PostgreSQL Solution</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+            <p>
+                This project was designed to solve the logistical challenge of allocating airport gates to incoming flights efficiently. 
+                The system ensures that no two flights are assigned to the same gate at the same time, while providing real-time scheduling updates.
+            </p>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-sitemap"></i> Architecture</h2>
+            <p>The system follows a monolithic RESTful architecture with a focus on clean code and separation of concerns.</p>
+            
+            
+            
+            <ul style="margin-top: 20px; list-style: disc; padding-left: 20px;">
+                <li><strong>Backend:</strong> Java 17, Spring Boot, Spring Data JPA.</li>
+                <li><strong>Security:</strong> JWT (JSON Web Tokens) for role-based access control (Admin/Staff).</li>
+                <li><strong>Database:</strong> PostgreSQL for persistent storage.</li>
+                <li><strong>Tools:</strong> Docker for containerization, Swagger for API documentation.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-camera"></i> Application Screenshots</h2>
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="images/swagger-ui.png" alt="Swagger API Documentation" style="width:100%; border-radius: 8px; border: 1px solid #333;">
+                    <p class="institution" style="text-align: center; margin-top: 10px;">Swagger API Documentation & Testing</p>
+                </div>
+                <div class="gallery-item" style="margin-top: 30px;">
+                    <img src="images/database-schema.png" alt="Database Schema" style="width:100%; border-radius: 8px; border: 1px solid #333;">
+                    <p class="institution" style="text-align: center; margin-top: 10px;">PostgreSQL Database Schema</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Conflict Detection</h3>
+                    <p>Automated validation logic that prevents overlapping flight schedules at the same gate.</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Secure Auth</h3>
+                    <p>Robust authentication system where only authorized personnel can modify flight data.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://github.com/marko-popov/Airport_Gate_Management_System" target="_blank" class="btn">
+            <i class="fab fa-github"></i> View Full Source Code
+        </a>
+        <p style="margin-top: 30px;">&copy; 2026 Marko Popov</p>
+    </footer>
+
+</body>
+</html>
