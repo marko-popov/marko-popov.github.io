@@ -6,70 +6,107 @@
     <title>Airport Gate Management | Project Detail</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <style>
+        /* Dodatni fiks za poravnanje direktno u fajlu radi sigurnosti */
+        .header-flex-container {
+            display: flex;
+            align-items: center; /* Centrira logo i tekst vertikalno */
+            gap: 25px;
+            flex-wrap: nowrap;
+        }
+
+        .logo-wrapper {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 20px;
+            display: inline-flex; /* Sprečava širenje belog bloka na 100% */
+            flex-shrink: 0;      /* Ne dozvoljava smanjivanje logoa */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .header-text h1 {
+            white-space: nowrap; 
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 992px) {
+            .header-flex-container {
+                flex-direction: column; /* Na mobilnom idu jedan ispod drugog */
+                text-align: center;
+            }
+            .header-text h1 {
+                white-space: normal;
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <a href="index.html" class="btn btn-outline" style="margin-bottom: 20px;">
+    <header class="project-header">
+        <div class="header-overlay"></div>
+        <div class="container header-content">
+            <a href="index.html" class="btn-back">
                 <i class="fas fa-arrow-left"></i> Back to Portfolio
             </a>
 
             <div class="header-flex-container">
-                <img src="images/logo.jpg" alt="Project Logo" class="project-logo-side">
+                <div class="logo-wrapper">
+                    <img src="images/logo.jpg" alt="Project Logo" class="project-logo-side" style="width: 120px; height: auto; display: block;">
+                </div>
+                
                 <div class="header-text">
                     <h1>Airport Gate Management System</h1>
-                    <p class="subtitle">Java Spring Boot & PostgreSQL Solution</p>
+                    <div class="badge-container">
+                        <span class="badge"><i class="fab fa-java"></i> Java Spring Boot</span>
+                        <span class="badge"><i class="fas fa-database"></i> PostgreSQL</span>
+                        <span class="badge"><i class="fas fa-shield-alt"></i> JWT Auth</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <section id="overview">
-            <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
-            <p>
-                This project was designed to solve the logistical challenge of allocating airport gates to incoming flights efficiently. 
-                The system ensures that no two flights are assigned to the same gate at the same time, while providing real-time scheduling updates.
-            </p>
+        <section id="overview" style="margin-top: 50px;">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Project Overview</h2>
+            <div class="content-card">
+                <p>
+                    This project was designed to solve the logistical challenge of allocating airport gates to incoming flights efficiently. 
+                    The system ensures that no two flights are assigned to the same gate at the same time, while providing real-time scheduling updates.
+                </p>
+                <div class="transition-tag">Key Focus: Resource Optimization & Security</div>
+            </div>
         </section>
 
         <section id="architecture">
-            <h2><i class="fas fa-sitemap"></i> Architecture</h2>
-            <p>The system follows a monolithic RESTful architecture with a focus on clean code and separation of concerns.</p>
-            
-            <ul style="margin-top: 20px; list-style: disc; padding-left: 20px;">
-                <li><strong>Backend:</strong> Java 17, Spring Boot, Spring Data JPA.</li>
-                <li><strong>Security:</strong> JWT (JSON Web Tokens) for role-based access control (Admin/Staff).</li>
-                <li><strong>Database:</strong> PostgreSQL for persistent storage.</li>
-                <li><strong>Tools:</strong> Docker for containerization, Swagger for API documentation.</li>
-            </ul>
-        </section>
-
-        <section id="screenshots">
-            <h2><i class="fas fa-camera"></i> Application Screenshots</h2>
-            <div class="project-gallery">
-                <div class="gallery-item">
-                    <img src="images/swagger-ui.png" alt="Swagger API Documentation">
-                    <p class="institution" style="text-align: center; margin-top: 10px;">Swagger API Documentation & Testing</p>
+            <h2 class="section-title"><i class="fas fa-sitemap"></i> Architecture & Tech Stack</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Backend Layer</h3>
+                    <p>Built with Java 17 and Spring Boot, utilizing Spring Data JPA for efficient database communication and Hibernate for ORM.</p>
                 </div>
-                <div class="gallery-item" style="margin-top: 30px;">
-                    <img src="images/database-schema.png" alt="Database Schema">
-                    <p class="institution" style="text-align: center; margin-top: 10px;">PostgreSQL Database Schema</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-lock"></i> Security Model</h3>
+                    <p>Implemented Spring Security with Stateless JWT authentication to ensure secure API access for different user roles.</p>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-box"></i> Infrastructure</h3>
+                    <p>Containerized using Docker and Docker Compose for easy deployment. PostgreSQL is used for reliable and persistent data storage.</p>
                 </div>
             </div>
         </section>
 
-        <section id="features">
-            <h2><i class="fas fa-star"></i> Key Features</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-exclamation-triangle"></i> Conflict Detection</h3>
-                    <p>Automated validation logic that prevents overlapping flight schedules at the same gate.</p>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-lock"></i> Secure Auth</h3>
-                    <p>Robust authentication system where only authorized personnel can modify flight data.</p>
+        <section id="screenshots">
+            <h2 class="section-title"><i class="fas fa-camera"></i> Implementation Details</h2>
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="images/swagger-ui.png" alt="Swagger API Documentation">
+                    <p style="text-align: center; margin-top: 15px; color: var(--text-muted);">
+                        <i class="fas fa-check-circle"></i> Interactive API Documentation using Swagger/OpenAPI
+                    </p>
                 </div>
             </div>
         </section>
@@ -77,10 +114,12 @@
 
     <footer>
         <div class="container">
-            <a href="https://github.com/marko-popov/Airport_Gate_Management_System" target="_blank" class="btn">
-                <i class="fab fa-github"></i> View Full Source Code
-            </a>
-            <p style="margin-top: 30px;">&copy; 2026 Marko Popov | Built with Engineering Precision</p>
+            <div style="margin-bottom: 30px;">
+                <a href="https://github.com/marko-popov/Airport_Gate_Management_System" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github"></i> View Full Source Code
+                </a>
+            </div>
+            <p>&copy; 2026 Marko Popov | Built with Engineering Precision</p>
         </div>
     </footer>
 
