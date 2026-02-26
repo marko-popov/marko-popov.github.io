@@ -12,22 +12,20 @@ I am a results-driven professional with 9 years of experience in leadership and 
 * **Frontend:** HTML5, CSS3, JavaScript (ES6+), Responsive Design
 * **Data Analysis:** Python (Pandas, Matplotlib), Advanced Excel (VBA)
 * **Infrastructure:** PostgreSQL, Docker, Docker Compose, Git, Linux Shell
-* **Testing:** JUnit 5, Mockito, Integration Testing
+* **Testing:** JUnit 5, Mockito
 
 ---
 
 ### 🛠️ Featured Projects
 
-#### [Airport Gate Management System](https://github.com/marko-popov/Airport_Gate_Management_System)
+#### ✈️ [Airport Gate Management System](https://github.com/marko-popov/Airport_Gate_Management_System)
 *A Spring Boot RESTful application for optimizing airport resource allocation.*
 * **Tech Stack:** Java 17, Spring Boot, PostgreSQL, Docker, JWT.
-* **Core Logic:** Implemented thread-safe gate assignments and secure role-based access control.
+* **Core Logic:** Implemented conflict-detection algorithms for gate assignments and secure role-based access control.
 
-
-
-#### [Patient Management System](https://github.com/marko-popov/Airport_Gate_Management_System) *(In Progress)*
+#### 🏥 Patient Management System *(In Progress)*
 *A microservices-based approach to scalable healthcare data management.*
-* **Key Focus:** Inter-service communication using **gRPC** and **Apache Kafka**.
+* **Key Focus:** Exploring inter-service communication using **gRPC** and **Apache Kafka**.
 
 ---
 
@@ -40,17 +38,15 @@ I am a results-driven professional with 9 years of experience in leadership and 
 ---
 
 ### 🌐 Full-Stack Vision
-While my primary focus is **Java Backend**, I am actively expanding my knowledge in **Frontend technologies (HTML, CSS, JS)** to better understand the complete software development life cycle and build seamless user experiences.
-
-
+While my primary focus is **Java Backend**, I am actively expanding my knowledge in **Frontend technologies** to better understand the complete software development life cycle and build seamless end-to-end solutions.
 
 ---
 
 ### 📫 Connect with me:
 
-* **Portfolio:** [marko-popov.github.io](https://marko-popov.github.io/)
-* **LinkedIn:** [linkedin.com/in/marko-popov](https://linkedin.com/in/marko-popov)
-* **Email:** markopopov1993@gmail.com
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/marko-popov)
+[![Portfolio](https://img.shields.io/badge/Portfolio-2ecc71?style=for-the-badge&logo=google-chrome&logoColor=white)](https://marko-popov.github.io/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:markopopov1993@gmail.com)
 
 ---
 
