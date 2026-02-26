@@ -14,13 +14,19 @@
             <a href="index.html" class="btn btn-outline" style="margin-bottom: 20px;">
                 <i class="fas fa-arrow-left"></i> Back to Portfolio
             </a>
-            <h1>Airport Gate Management System</h1>
-            <p class="subtitle">Java Spring Boot & PostgreSQL Solution</p>
+
+            <div class="header-flex-container">
+                <img src="images/logo.jpg" alt="Project Logo" class="project-logo-side">
+                <div class="header-text">
+                    <h1>Airport Gate Management System</h1>
+                    <p class="subtitle">Java Spring Boot & PostgreSQL Solution</p>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <section>
+        <section id="overview">
             <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
             <p>
                 This project was designed to solve the logistical challenge of allocating airport gates to incoming flights efficiently. 
@@ -28,11 +34,9 @@
             </p>
         </section>
 
-        <section>
+        <section id="architecture">
             <h2><i class="fas fa-sitemap"></i> Architecture</h2>
             <p>The system follows a monolithic RESTful architecture with a focus on clean code and separation of concerns.</p>
-            
-            
             
             <ul style="margin-top: 20px; list-style: disc; padding-left: 20px;">
                 <li><strong>Backend:</strong> Java 17, Spring Boot, Spring Data JPA.</li>
@@ -42,29 +46,29 @@
             </ul>
         </section>
 
-        <section>
+        <section id="screenshots">
             <h2><i class="fas fa-camera"></i> Application Screenshots</h2>
             <div class="project-gallery">
                 <div class="gallery-item">
-                    <img src="images/swagger-ui.png" alt="Swagger API Documentation" style="width:100%; border-radius: 8px; border: 1px solid #333;">
+                    <img src="images/swagger-ui.png" alt="Swagger API Documentation">
                     <p class="institution" style="text-align: center; margin-top: 10px;">Swagger API Documentation & Testing</p>
                 </div>
                 <div class="gallery-item" style="margin-top: 30px;">
-                    <img src="images/database-schema.png" alt="Database Schema" style="width:100%; border-radius: 8px; border: 1px solid #333;">
+                    <img src="images/database-schema.png" alt="Database Schema">
                     <p class="institution" style="text-align: center; margin-top: 10px;">PostgreSQL Database Schema</p>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section id="features">
             <h2><i class="fas fa-star"></i> Key Features</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Conflict Detection</h3>
+                    <h3><i class="fas fa-exclamation-triangle"></i> Conflict Detection</h3>
                     <p>Automated validation logic that prevents overlapping flight schedules at the same gate.</p>
                 </div>
                 <div class="skill-category">
-                    <h3>Secure Auth</h3>
+                    <h3><i class="fas fa-lock"></i> Secure Auth</h3>
                     <p>Robust authentication system where only authorized personnel can modify flight data.</p>
                 </div>
             </div>
@@ -72,10 +76,12 @@
     </main>
 
     <footer>
-        <a href="https://github.com/marko-popov/Airport_Gate_Management_System" target="_blank" class="btn">
-            <i class="fab fa-github"></i> View Full Source Code
-        </a>
-        <p style="margin-top: 30px;">&copy; 2026 Marko Popov</p>
+        <div class="container">
+            <a href="https://github.com/marko-popov/Airport_Gate_Management_System" target="_blank" class="btn">
+                <i class="fab fa-github"></i> View Full Source Code
+            </a>
+            <p style="margin-top: 30px;">&copy; 2026 Marko Popov | Built with Engineering Precision</p>
+        </div>
     </footer>
 
 </body>
