@@ -1,17 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Airport Gate Management | Project Detail</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/jpg" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+    <style>
+      /* --- WORKFLOW SPECIFIC CSS --- */
+
+      .workflow {
+        position: relative;
+        margin: 70px 0;
+        padding-left: 60px; /* prostor za brojeve */
+        border-left: 3px solid var(--primary);
+      }
+
+      .workflow-step {
+        position: relative;
+        margin-bottom: 60px;
+        opacity: 0;
+        transform: translateX(-40px);
+        transition: all 0.6s ease;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .workflow-step.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .workflow-dot {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+        background-color: var(--primary);
+        border-radius: 50%;
+        box-shadow: 0 0 20px var(--primary);
+        color: var(--white);
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .workflow-step.active .workflow-dot {
+        box-shadow: 0 0 28px 6px var(--primary);
+      }
+
+      .workflow-content h3 {
+        margin: 0 0 8px;
+        font-weight: 700;
+        color: var(--white);
+        font-size: 1.15rem;
+      }
+
+      .workflow-content p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.4;
+        max-width: 650px;
+      }
+    </style>
 </head>
 
 <body>
-
 <header class="project-header">
     <div class="header-overlay"></div>
     <div class="container header-content">
@@ -22,7 +85,7 @@
 
         <div class="header-flex-container">
             <div class="logo-wrapper">
-                <img src="images/logo.jpg" alt="Project Logo" class="project-logo-side">
+                <img src="images/logo.jpg" alt="Project Logo" class="project-logo-side" />
             </div>
 
             <div class="header-text">
@@ -34,7 +97,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </header>
 
@@ -90,59 +152,101 @@
         </div>
     </section>
 
-    <!-- Swagger Screenshots -->
-    <section id="screenshots">
-        <h2 class="section-title">
-            <i class="fas fa-camera"></i> Swagger API Screenshots
-        </h2>
+    <!-- Workflow Section -->
+    <section id="workflow-section">
+      <h2 class="section-title">
+          <i class="fas fa-cogs"></i> Workflow & Process
+      </h2>
 
-        <div class="project-gallery">
+      <div class="workflow">
 
-            <!-- Screenshot 1 -->
-            <div class="gallery-item">
-                <div class="screenshot-placeholder">
-                    <i class="fas fa-image"></i>
-                    <p>Swagger UI – API Overview (Coming Soon)</p>
-                </div>
-                <p class="screenshot-description">
-                    <i class="fas fa-check-circle"></i> Complete API Documentation Overview
-                </p>
-            </div>
-
-            <!-- Screenshot 2 -->
-            <div class="gallery-item">
-                <div class="screenshot-placeholder">
-                    <i class="fas fa-lock"></i>
-                    <p>Authentication Endpoints (Coming Soon)</p>
-                </div>
-                <p class="screenshot-description">
-                    <i class="fas fa-shield-alt"></i> JWT Login & Role-Based Access
-                </p>
-            </div>
-
-            <!-- Screenshot 3 -->
-            <div class="gallery-item">
-                <div class="screenshot-placeholder">
-                    <i class="fas fa-plane"></i>
-                    <p>Gate Management API (Coming Soon)</p>
-                </div>
-                <p class="screenshot-description">
-                    <i class="fas fa-exchange-alt"></i> Gate Assignment & Conflict Prevention
-                </p>
-            </div>
-
-            <!-- Screenshot 4 -->
-            <div class="gallery-item">
-                <div class="screenshot-placeholder">
-                    <i class="fas fa-clock"></i>
-                    <p>Flight Scheduling API (Coming Soon)</p>
-                </div>
-                <p class="screenshot-description">
-                    <i class="fas fa-calendar-alt"></i> Time Validation & Scheduling Logic
-                </p>
-            </div>
-
+        <div class="workflow-step">
+          <div class="workflow-dot">1</div>
+          <div class="workflow-content">
+            <h3>Flight Request</h3>
+            <p>User submits flight number via secured REST endpoint.</p>
+          </div>
         </div>
+
+        <div class="workflow-step">
+          <div class="workflow-dot">2</div>
+          <div class="workflow-content">
+            <h3>Validation</h3>
+            <p>Service validates arrival time and gate operating window.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-dot">3</div>
+          <div class="workflow-content">
+            <h3>Availability Filtering</h3>
+            <p>Repository filters gates by time and occupancy constraints.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-dot">4</div>
+          <div class="workflow-content">
+            <h3>Transactional Assignment</h3>
+            <p>Gate assignment executed atomically within transactional boundary.</p>
+          </div>
+        </div>
+
+        <div class="workflow-step">
+          <div class="workflow-dot">5</div>
+          <div class="workflow-content">
+            <h3>Secure Response</h3>
+            <p>Assigned gate returned as JSON response with role validation.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Diagrams Section -->
+    <section id="diagrams">
+      <h2 class="section-title">
+        <i class="fas fa-project-diagram"></i> Diagrams
+      </h2>
+
+      <div class="diagram-grid">
+
+        <div class="diagram-item">
+          <h3>ER Diagram</h3>
+          <div class="diagram-placeholder">
+            <!-- Place your ER Diagram here -->
+            <p>ER Diagram Placeholder</p>
+          </div>
+        </div>
+
+        <div class="diagram-item">
+          <h3>Sequence Diagram</h3>
+          <div class="diagram-placeholder">
+            <!-- Place your Sequence Diagram here -->
+            <p>Sequence Diagram Placeholder</p>
+          </div>
+        </div>
+
+        <div class="diagram-item">
+          <h3>Package Diagram</h3>
+          <div class="diagram-placeholder">
+            <!-- Place your Package Diagram here -->
+            <p>Package Diagram Placeholder</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Swagger Screenshots Section -->
+    <section id="screenshots">
+      <h2 class="section-title">
+        <i class="fas fa-camera"></i> Swagger API Screenshots
+      </h2>
+
+      <div class="project-gallery">
+        <!-- Empty placeholders for screenshots -->
+      </div>
     </section>
 
 </main>
@@ -150,10 +254,12 @@
 <footer>
     <div class="container">
         <div>
-            <a href="https://github.com/marko-popov/Airport_Gate_Management_System"
-               target="_blank"
-               class="btn btn-primary">
-                <i class="fab fa-github"></i> View Full Source Code
+            <a
+              href="https://github.com/marko-popov/Airport_Gate_Management_System"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              <i class="fab fa-github"></i> View Full Source Code
             </a>
         </div>
 
@@ -161,5 +267,6 @@
     </div>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
