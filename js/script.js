@@ -6,45 +6,78 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Marko Popov Portfolio - Script Loaded Successfully.");
 
-    // Select all sections to apply the fade-in effect
+    /* ===================================== */
+    /* 1. SECTION FADE-IN ANIMATION */
+    /* ===================================== */
+
     const sections = document.querySelectorAll('section');
 
-    // Configuration for the Intersection Observer
-    const options = {
-        threshold: 0.15, // Trigger when 15% of the section is visible
-        rootMargin: "0px 0px -50px 0px" // Slight offset to feel more natural
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Apply final visible styles
                 entry.target.style.opacity = "1";
                 entry.target.style.transform = "translateY(0)";
-                
-                // Stop observing once the animation is done
                 observer.unobserve(entry.target);
             }
         });
-    }, options);
-
-    sections.forEach(section => {
-        // Set initial hidden state before animation starts
-        section.style.opacity = "0";
-        section.style.transform = "translateY(30px)"; // Slightly deeper movement
-        section.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
-        
-        // Start watching the section
-        observer.observe(section);
+    }, {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
     });
 
-    // Optional: Smooth scroll for internal links (if any are added in the future)
+    sections.forEach(section => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(30px)";
+        section.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+        sectionObserver.observe(section);
+    });
+
+
+    /* ===================================== */
+    /* 2. WORKFLOW STEP ANIMATION */
+    /* ===================================== */
+
+    const workflowSteps = document.querySelectorAll('.workflow-step');
+
+    if (workflowSteps.length > 0) {
+
+        const workflowObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+
+                    workflowSteps.forEach((step, index) => {
+                        setTimeout(() => {
+                            step.classList.add('active');
+                        }, index * 200); // sequential delay
+                    });
+
+                    workflowObserver.disconnect(); // run once
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        workflowObserver.observe(document.querySelector('#workflow-section'));
+    }
+
+
+    /* ===================================== */
+    /* 3. SMOOTH SCROLL FOR INTERNAL LINKS */
+    /* ===================================== */
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+
+            const target = document.querySelector(this.getAttribute('href'));
+            if (!target) return;
+
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+            target.scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
+
 });
