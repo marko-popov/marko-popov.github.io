@@ -1,11 +1,11 @@
 /* --- Global Variables & Resets --- */
 :root {
-    --primary: #007bff;        /* Java Blue */
+    --primary: #007bff;
     --primary-dark: #0056b3;
-    --bg-dark: #0a0b10;        /* Modern Deep Black */
-    --card-bg: #161b22;        /* Card background */
-    --text-main: #e6edf3;      /* Main text color */
-    --text-muted: #8b949e;     /* Muted secondary text */
+    --bg-dark: #0a0b10;
+    --card-bg: #161b22;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
     --white: #ffffff;
     --glass: rgba(255, 255, 255, 0.1);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -31,7 +31,7 @@ body {
     padding: 0 25px;
 }
 
-/* --- 1. INDEX PAGE HEADER (No Logo, Centered) --- */
+/* --- 1. INDEX PAGE HEADER --- */
 .index-header {
     position: relative;
     padding: 120px 0 80px;
@@ -69,7 +69,7 @@ body {
     margin: 0 10px;
 }
 
-/* --- 2. PROJECT PAGE HEADER (Logo + Image Background) --- */
+/* --- 2. PROJECT PAGE HEADER --- */
 .project-header {
     position: relative;
     min-height: 400px;
@@ -97,22 +97,20 @@ body {
     width: 100%;
 }
 
-/* Container that holds logo and title side-by-side */
 .header-flex-container {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 30px;
     flex-wrap: nowrap;
 }
 
-/* Fix for the white box - inline-flex prevents it from stretching */
 .logo-wrapper {
     background: var(--white);
     padding: 12px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     flex-shrink: 0;
-    display: inline-flex; 
+    display: inline-flex;
 }
 
 .project-logo-side {
@@ -127,10 +125,10 @@ body {
     font-weight: 800;
     color: var(--white);
     margin: 0;
-    white-space: nowrap; /* Keeps title in one line */
+    white-space: nowrap;
 }
 
-/* --- 3. COMMON ELEMENTS (Both Pages) --- */
+/* --- 3. COMMON ELEMENTS --- */
 .section-title {
     font-size: 1.6rem;
     color: var(--white);
@@ -141,7 +139,9 @@ body {
     text-transform: uppercase;
 }
 
-.content-card, .project-card, .skill-category {
+.content-card,
+.project-card,
+.skill-category {
     background: var(--card-bg);
     padding: 30px;
     border-radius: 12px;
@@ -150,9 +150,12 @@ body {
     transition: var(--transition);
 }
 
-.featured-border { border-left: 5px solid var(--primary); }
+.featured-border {
+    border-left: 5px solid var(--primary);
+}
 
-.content-card:hover, .project-card:hover {
+.content-card:hover,
+.project-card:hover {
     border-color: rgba(0, 123, 255, 0.4);
     transform: translateY(-5px);
 }
@@ -173,7 +176,13 @@ body {
     color: var(--white);
 }
 
-.tags { margin: 15px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 .tags span {
     background: #21262d;
     color: var(--text-muted);
@@ -212,7 +221,9 @@ body {
     border-radius: 8px;
 }
 
-.btn-sm { font-size: 0.85rem; }
+.btn-sm {
+    font-size: 0.85rem;
+}
 
 .btn-back {
     display: inline-flex;
@@ -239,7 +250,9 @@ body {
     transition: var(--transition);
 }
 
-.social-links a:hover { color: var(--primary); }
+.social-links a:hover {
+    color: var(--primary);
+}
 
 .contact-banner {
     text-align: center;
@@ -255,10 +268,83 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* --- 5. RESPONSIVE --- */
+/* --- 5. PROJECT PAGE - SCREENSHOTS --- */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-placeholder {
+    height: 230px;
+    background: linear-gradient(145deg, #1c2128, #21262d);
+    border: 2px dashed rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.screenshot-placeholder i {
+    font-size: 38px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.screenshot-placeholder:hover {
+    border-color: var(--primary);
+    background: linear-gradient(145deg, #1f2733, #242d38);
+}
+
+.screenshot-description {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+/* --- 6. RESPONSIVE --- */
 @media (max-width: 768px) {
-    .header-text-center h1 { font-size: 2.5rem; }
-    .header-flex-container { flex-direction: column; text-align: center; }
-    .header-text h1 { white-space: normal; font-size: 2rem; }
-    .logo-wrapper { margin: 0 auto; }
+    .header-text-center h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        white-space: normal;
+        font-size: 2rem;
+    }
+
+    .logo-wrapper {
+        margin: 0 auto;
+    }
 }
