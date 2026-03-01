@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Airport Gate Management | Project Detail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,201 +72,256 @@
         max-width: 650px;
       }
     </style>
-</head>
+  </head>
 
-<body>
-<header class="project-header">
-    <div class="header-overlay"></div>
-    <div class="container header-content">
-
+  <body>
+    <header class="project-header">
+      <div class="header-overlay"></div>
+      <div class="container header-content">
         <a href="index.html" class="btn-back">
-            <i class="fas fa-arrow-left"></i> Back to Portfolio
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
         </a>
 
         <div class="header-flex-container">
-            <div class="logo-wrapper">
-                <img src="images/logo.jpg" alt="Project Logo" class="project-logo-side" />
-            </div>
+          <div class="logo-wrapper">
+            <img
+              src="images/logo.jpg"
+              alt="Project Logo"
+              class="project-logo-side"
+            />
+          </div>
 
-            <div class="header-text">
-                <h1>Airport Gate Management System</h1>
-                <div class="badge-container">
-                    <span class="badge"><i class="fab fa-java"></i> Java Spring Boot</span>
-                    <span class="badge"><i class="fas fa-database"></i> PostgreSQL</span>
-                    <span class="badge"><i class="fas fa-shield-alt"></i> JWT Auth</span>
-                </div>
+          <div class="header-text">
+            <h1>Airport Gate Management System</h1>
+            <div class="badge-container">
+              <span class="badge"
+                ><i class="fab fa-java"></i> Java Spring Boot</span
+              >
+              <span class="badge"
+                ><i class="fas fa-database"></i> PostgreSQL</span
+              >
+              <span class="badge"
+                ><i class="fas fa-shield-alt"></i> JWT Auth</span
+              >
             </div>
+          </div>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main class="container">
-
-    <!-- Overview -->
-    <section id="overview">
+    <main class="container">
+      <!-- Overview -->
+      <section id="overview">
         <h2 class="section-title">
-            <i class="fas fa-info-circle"></i> Project Overview
+          <i class="fas fa-info-circle"></i> Project Overview
         </h2>
 
         <div class="content-card">
-            <p>
-                This project was designed to solve the logistical challenge of allocating airport gates to incoming flights efficiently.
-                The system ensures that no two flights are assigned to the same gate at the same time, while providing real-time scheduling updates.
-            </p>
+          <p>
+            This project was designed to solve the logistical challenge of
+            allocating airport gates to incoming flights efficiently. The system
+            ensures that no two flights are assigned to the same gate at the
+            same time, while providing real-time scheduling updates.
+          </p>
 
-            <div class="transition-tag">
-                Key Focus: Resource Optimization & Security
-            </div>
+          <div class="transition-tag">
+            Key Focus: Resource Optimization & Security
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Architecture -->
-    <section id="architecture">
+      <!-- Architecture -->
+      <section id="architecture">
         <h2 class="section-title">
-            <i class="fas fa-sitemap"></i> Architecture & Tech Stack
+          <i class="fas fa-sitemap"></i> Architecture & Tech Stack
         </h2>
 
         <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-layer-group"></i> Backend Layer</h3>
+            <p>
+              Built with Java 17 and Spring Boot, utilizing Spring Data JPA and
+              Hibernate for ORM-based persistence.
+            </p>
+          </div>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-layer-group"></i> Backend Layer</h3>
-                <p>
-                    Built with Java 17 and Spring Boot, utilizing Spring Data JPA and Hibernate for ORM-based persistence.
-                </p>
-            </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-lock"></i> Security Model</h3>
+            <p>
+              Implemented Spring Security with Stateless JWT authentication to
+              ensure secure API access for different user roles.
+            </p>
+          </div>
 
-            <div class="skill-category">
-                <h3><i class="fas fa-lock"></i> Security Model</h3>
-                <p>
-                    Implemented Spring Security with Stateless JWT authentication to ensure secure API access for different user roles.
-                </p>
-            </div>
-
-            <div class="skill-category">
-                <h3><i class="fas fa-box"></i> Infrastructure</h3>
-                <p>
-                    Containerized using Docker and Docker Compose. PostgreSQL is used for reliable and persistent data storage.
-                </p>
-            </div>
-
+          <div class="skill-category">
+            <h3><i class="fas fa-box"></i> Infrastructure</h3>
+            <p>
+              Containerized using Docker and Docker Compose. PostgreSQL is used
+              for reliable and persistent data storage.
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Workflow Section -->
-    <section id="workflow-section">
-      <h2 class="section-title">
+      <!-- Workflow Section -->
+      <section id="workflow-section">
+        <h2 class="section-title">
           <i class="fas fa-cogs"></i> Workflow & Process
-      </h2>
+        </h2>
 
-      <div class="workflow">
+        <div class="workflow">
+          <div class="workflow-step">
+            <div class="workflow-dot">1</div>
+            <div class="workflow-content">
+              <h3>Flight Request</h3>
+              <p>User submits flight number via secured REST endpoint.</p>
+            </div>
+          </div>
 
-        <div class="workflow-step">
-          <div class="workflow-dot">1</div>
-          <div class="workflow-content">
-            <h3>Flight Request</h3>
-            <p>User submits flight number via secured REST endpoint.</p>
+          <div class="workflow-step">
+            <div class="workflow-dot">2</div>
+            <div class="workflow-content">
+              <h3>Validation</h3>
+              <p>Service validates arrival time and gate operating window.</p>
+            </div>
+          </div>
+
+          <div class="workflow-step">
+            <div class="workflow-dot">3</div>
+            <div class="workflow-content">
+              <h3>Availability Filtering</h3>
+              <p>Repository filters gates by time and occupancy constraints.</p>
+            </div>
+          </div>
+
+          <div class="workflow-step">
+            <div class="workflow-dot">4</div>
+            <div class="workflow-content">
+              <h3>Transactional Assignment</h3>
+              <p>
+                Gate assignment executed atomically within transactional
+                boundary.
+              </p>
+            </div>
+          </div>
+
+          <div class="workflow-step">
+            <div class="workflow-dot">5</div>
+            <div class="workflow-content">
+              <h3>Secure Response</h3>
+              <p>
+                Assigned gate returned as JSON response with role validation.
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="workflow-step">
-          <div class="workflow-dot">2</div>
-          <div class="workflow-content">
-            <h3>Validation</h3>
-            <p>Service validates arrival time and gate operating window.</p>
+      <!-- Diagrams Section -->
+      <section id="diagrams">
+        <h2 class="section-title">
+          <i class="fas fa-project-diagram"></i> Diagrams
+        </h2>
+
+        <div class="diagram-grid">
+          <div class="diagram-item">
+            <h3>ER Diagram</h3>
+            <div class="diagram-placeholder">
+              <img
+                src="images\diagrams\database_ER_diagram.png"
+                alt="ER Diagram"
+              />
+            </div>
+          </div>
+
+          <div class="diagram-item">
+            <h3>Sequence Diagram</h3>
+            <div class="diagram-placeholder">
+              <img
+                src="images\diagrams\sequence_diagram.png"
+                alt="Sequence Diagram"
+              />
+            </div>
+          </div>
+
+          <div class="diagram-item">
+            <h3>Package Diagram</h3>
+            <div class="diagram-placeholder">
+              <img
+                src="images\diagrams\package_diagram.png"
+                alt="Package Diagram"
+              />
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="workflow-step">
-          <div class="workflow-dot">3</div>
-          <div class="workflow-content">
-            <h3>Availability Filtering</h3>
-            <p>Repository filters gates by time and occupancy constraints.</p>
+      <!-- Swagger Screenshots Section -->
+      <section id="screenshots">
+        <h2 class="section-title">
+          <i class="fas fa-camera"></i> Swagger API Screenshots
+        </h2>
+
+        <div class="project-gallery">
+          <div class="gallery-item">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-code"></i>
+              <p>Authentication Endpoints</p>
+            </div>
+            <div class="screenshot-description">
+              JWT login & token generation endpoints.
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-plane"></i>
+              <p>Flight Management API</p>
+            </div>
+            <div class="screenshot-description">
+              CRUD operations for flights and scheduling.
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-door-open"></i>
+              <p>Gate Assignment Endpoint</p>
+            </div>
+            <div class="screenshot-description">
+              Transactional gate allocation logic.
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-user-shield"></i>
+              <p>Role-Based Access</p>
+            </div>
+            <div class="screenshot-description">
+              Admin vs User authorization controls.
+            </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="workflow-step">
-          <div class="workflow-dot">4</div>
-          <div class="workflow-content">
-            <h3>Transactional Assignment</h3>
-            <p>Gate assignment executed atomically within transactional boundary.</p>
-          </div>
-        </div>
-
-        <div class="workflow-step">
-          <div class="workflow-dot">5</div>
-          <div class="workflow-content">
-            <h3>Secure Response</h3>
-            <p>Assigned gate returned as JSON response with role validation.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Diagrams Section -->
-    <section id="diagrams">
-      <h2 class="section-title">
-        <i class="fas fa-project-diagram"></i> Diagrams
-      </h2>
-
-      <div class="diagram-grid">
-
-        <div class="diagram-item">
-          <h3>ER Diagram</h3>
-          <div class="diagram-placeholder">
-            <!-- Place your ER Diagram here -->
-            <p>ER Diagram Placeholder</p>
-          </div>
-        </div>
-
-        <div class="diagram-item">
-          <h3>Sequence Diagram</h3>
-          <div class="diagram-placeholder">
-            <!-- Place your Sequence Diagram here -->
-            <p>Sequence Diagram Placeholder</p>
-          </div>
-        </div>
-
-        <div class="diagram-item">
-          <h3>Package Diagram</h3>
-          <div class="diagram-placeholder">
-            <!-- Place your Package Diagram here -->
-            <p>Package Diagram Placeholder</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Swagger Screenshots Section -->
-    <section id="screenshots">
-      <h2 class="section-title">
-        <i class="fas fa-camera"></i> Swagger API Screenshots
-      </h2>
-
-      <div class="project-gallery">
-        <!-- Empty placeholders for screenshots -->
-      </div>
-    </section>
-
-</main>
-
-<footer>
-    <div class="container">
+    <footer>
+      <div class="container">
         <div>
-            <a
-              href="https://github.com/marko-popov/Airport_Gate_Management_System"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              <i class="fab fa-github"></i> View Full Source Code
-            </a>
+          <a
+            href="https://github.com/marko-popov/Airport_Gate_Management_System"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fab fa-github"></i> View Full Source Code
+          </a>
         </div>
 
         <p>&copy; 2026 Marko Popov | Built with Engineering Precision</p>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="js/script.js"></script>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
